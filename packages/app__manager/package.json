@@ -20,16 +20,10 @@
   },
   "main": "main.ts",
   "scripts": {
-    "start": "npm run watch:dev",
     "app": "electron --inspect=5858 src/",
-    "test": "jest",
-    "tsc": "tsc --rootDir ./src/ --noEmit --skipLibCheck",
     "build:main": "webpack --env main --mode development",
     "build:renderer": "webpack --mode development",
     "build:dev": "npm run build:renderer && npm run build:main",
-    "watch:main": "webpack --env main --mode development --watch",
-    "watch:renderer": "webpack --mode development --watch",
-    "watch:dev": "npm-run-all -p watch:*",
     "release:main": "webpack --env main --mode production",
     "release:renderer": "webpack --mode production",
     "release:clean": "rimraf ./dist/src",
@@ -37,10 +31,8 @@
     "release:copy-json": "cpx \"./src/package.json\" ./dist/src/",
     "release:copy": "npm-run-all release:copy-*",
     "release:build": "npm-run-all -s release:clean release:copy -p release:main release:renderer",
-    "release:pack-mac": "cross-conf-env electron-packager ./dist/src npm_package_config_app --out=dist/bin --download.cache=dist/cache --platform=darwin --arch=x64 --overwrite --asar --icon=src/app.icns",
     "release:pack-win": "cross-conf-env electron-packager ./dist/src npm_package_config_app --out=dist/bin --download.cache=dist/cache --platform=win32 --arch=x64 --overwrite --asar --icon=src/app.ico --version-string.CompanyName=\"npm_package_config_appCompanyName\" --version-string.LegalCopyright=\"npm_package_config_appLegalCopyright\" --version-string.FileDescription=\"npm_package_config_appFileDescription\" --version-string.OriginalFilename=\"npm_package_config_app.exe\" --version-string.FileVersion=\"npm_package_version\" --version-string.ProductVersion=\"npm_package_version\" --version-string.ProductName=\"npm_package_config_app\" --version-string.InternalName=\"npm_package_config_app\"",
     "release:pack-linux": "cross-conf-env electron-packager ./dist/src npm_package_config_app --out=dist/bin --download.cache=dist/cache --platform=linux --arch=x64 --overwrite",
-    "release:mac": "npm-run-all -s release:build release:pack-mac",
     "release:win": "npm-run-all -s release:build release:pack-win",
     "release:linux": "npm-run-all -s release:build release:pack-linux",
     "release": "npm-run-all -s release:build release:pack-*"
@@ -49,18 +41,10 @@
   "dependencies": {
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
-    "@rematch/core": "^2.0.1",
     "core-js": "^3.14.0",
-    "framer-motion": "^4.1.17",
-    "imask": "^6.0.7",
-    "match-sorter": "^6.3.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-player": "^2.9.0",
-    "react-redux": "^7.2.4",
-    "react-router-dom": "^5.2.0",
-    "react-table": "^7.7.0",
-    "redux": "4.1.0"
+    "react-player": "^2.9.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.12",

@@ -10,21 +10,13 @@ export const createNewWindow = (
   config4Window?: any
 ) => {
   const windowKey: string =
-    windowType === 'ds' || windowType === 'sco' ? windowType : 'msm';
+    windowType === 'sst' ? windowType : 'msm';
 
   if (currentWindows[windowKey] !== null) return;
 
   let pathChunk = 'index.html';
   let settingsFilePath = 'settings.json';
 
-  if (windowType === 'ds') {
-    pathChunk = 'advertising/index.html';
-    settingsFilePath = 'advertising/settings.json';
-  }
-  if (windowType === 'sco') {
-    pathChunk = 'sco/index.html';
-    settingsFilePath = 'sco/settings.json';
-  }
   if (windowType === 'sst') {
     pathChunk = 'sst/index.html';
     settingsFilePath = 'sst/settings.json';

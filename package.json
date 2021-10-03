@@ -4,7 +4,7 @@
   "devDependencies": {},
   "husky": {},
   "license": "MIT",
-  "name": "@starter",
+  "name": "starter",
   "peerDependencies": {},
   "private": true,
   "repository": "https://gitlab.ixr.tech/udmf/client.git",
@@ -14,7 +14,7 @@
     "packages/*"
   ],
   "engines": {
-    "node": ">=14.16.1",
+    "node": ">=10.0.0",
     "yarn": ">=1.22.10"
   },
   "main": "index.js"
