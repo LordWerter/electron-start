@@ -10,29 +10,10 @@
   },
   "main": "./src/index.ts",
   "scripts": {
-    "build:dixy": "cross-env DIXY=true NODE_ENV=production webpack --bail --mode production",
-    "build:darvin": "cross-env DARVIN=true NODE_ENV=production webpack --bail --mode production",
-    "build:magnum": "cross-env MAGNUM=true NODE_ENV=production webpack --bail --mode production",
-    "build:perek": "cross-env PEREK=true NODE_ENV=production webpack --bail --mode production",
-    "build:ixr": "cross-env IXR=true NODE_ENV=production webpack --bail --mode production",
-
-    "build:dixy:dev": "cross-env DIXY=true NODE_ENV=development webpack --mode development",
-    "build:darvin:dev": "cross-env DARVIN=true NODE_ENV=development webpack --mode development",
-    "build:magnum:dev": "cross-env MAGNUM=true NODE_ENV=development webpack --mode development",
-    "build:perek:dev": "cross-env PEREK=true NODE_ENV=development webpack --mode development",
-    "build:ixr:dev": "cross-env IXR=true NODE_ENV=development webpack --mode development",
-
-    "build:dixy:dev:watch": "cross-env DIXY=true NODE_ENV=development webpack --mode development --watch",
-    "build:darvin:dev:watch": "cross-env DARVIN=true NODE_ENV=development webpack --mode development --watch",
-    "build:magnum:dev:watch": "cross-env MAGNUM=true NODE_ENV=development webpack --mode development --watch",
-    "build:perek:dev:watch": "cross-env PEREK=true NODE_ENV=development webpack --mode development --watch",
-    "build:ixr:dev:watch": "cross-env IXR=true NODE_ENV=development webpack --mode development --watch",
-
+    "build": "cross-env DIXY=true NODE_ENV=production webpack --bail --mode production",
     "prettier": "npx prettier --write '**/*.{js,jsx,ts,tsx,md,mdx}'",
-
     "lint": "eslint --quiet --ext .js,.jsx,.ts,.tsx --config ./.eslintrc.js",
     "test:jest": "cross-env CI=TRUE jest --env=jsdom --colors --coverage test --setupTestFrameworkScriptFile='../configs__jest/index.ts'",
-
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -116,6 +97,7 @@
     "stylelint": "^13.13.1",
     "stylelint-config-recommended": "^5.0.0",
     "ts-jest": "^27.0.3",
+    "ts-loader": "^9.2.6",
     "tslib": "^2.2.0",
     "type-fest": "^1.2.0",
     "typescript": "^4.3.2",
