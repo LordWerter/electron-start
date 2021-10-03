@@ -24,6 +24,7 @@ app.on('ready', () => {
 
   const path = PATH.join(__dirname, 'settings/msm/microapps.json');
   const appsSettings = JSON.parse(FS.readFileSync(path).toString());
+  console.log(appsSettings)
 
   for (let key in appsSettings) {
     if (appsSettings[key].enable) {
