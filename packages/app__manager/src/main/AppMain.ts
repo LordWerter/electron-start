@@ -3,6 +3,7 @@ import PATH from 'path';
 
 import { app } from 'electron';
 import { createNewWindow } from './WindowManager';
+import { initializeIpcEvents, releaseIpcEvents } from './IPCEvents';
 
 /**
  * Current window list.
@@ -44,6 +45,7 @@ app.on('ready', () => {
     }
   }
 
+  initializeIpcEvents(currentWindows);
 });
 
 /// #if env == 'DEBUG'
@@ -56,6 +58,7 @@ app.on('window-all-closed', () => {
   /// #if env == 'DEBUG'
   console.log('All of the window was closed.');
   /// #endif
+  releaseIpcEvents();
 
   app.quit();
 });

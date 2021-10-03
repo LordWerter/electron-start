@@ -1,3 +1,4 @@
+import path from 'path';
 import { Configuration } from 'webpack';
 
 export default (env: any, argv: Configuration) => {
@@ -26,6 +27,9 @@ export default (env: any, argv: Configuration) => {
       rules: [
         {
           test: /\.(ts|js)x?$/,
+          include: [
+            path.resolve(__dirname, '../app__manager/src'),
+          ],
           exclude: /node_modules/,
           use: [
             {

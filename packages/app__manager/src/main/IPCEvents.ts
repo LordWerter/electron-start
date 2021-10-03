@@ -16,6 +16,15 @@ export const initializeIpcEvents = (currentWindows: {
   if (initialized) {
     return
   }
+  ipcMain.handle(IPCKey.showSSTWindow, (ev: IpcMainInvokeEvent) => {
+    console.log('RUNTIME: IPCKey.showAdvWindow was run')
+    showWindow('sst', currentWindows)
+  })
+
+  ipcMain.handle(IPCKey.showMSMManagerWindow, (ev: IpcMainInvokeEvent) => {
+    showWindow('msm', currentWindows)
+  })
+
   initialized = true
 }
 
@@ -24,6 +33,7 @@ export const initializeIpcEvents = (currentWindows: {
  */
 export const releaseIpcEvents = () => {
   if (initialized) {
+    ipcMain.removeAllListeners(IPCKey.showSSTWindow)
     ipcMain.removeAllListeners(IPCKey.showMSMManagerWindow)
   }
 
