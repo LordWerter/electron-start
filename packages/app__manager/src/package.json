@@ -1,0 +1,16 @@
+{
+  "name": "udmf-client",
+  "description": "UDMF Client",
+  "version": "1.0.0",
+  "author": "a.rudenko",
+  "license": "MIT",
+  "main": "assets/main.js",
+  "keywords": [
+    "Electron",
+    "UDMF Client"
+  ],
+  "scripts": {
+      },
+  "dependencies": {
+  }
+}

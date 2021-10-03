@@ -1,0 +1,16 @@
+{
+	"name": "@udmf-client/utils",
+	"version": "0.0.1",
+	"author": "Alexander Rudenko<Aleksandr.Rudenko@ixr.tech>",
+    "license": "MIT",
+    "repository": {
+		"type": "https",
+		"url": "https://gitlab.ixr.tech/udmf/client.git"
+	},
+	"main": "",
+    "types": "index.ts",
+	"scripts": {},
+	"dependencies": {},
+	"devDependencies": {
+	}
+}

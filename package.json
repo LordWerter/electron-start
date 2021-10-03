@@ -1,0 +1,21 @@
+{
+  "author": "Alexander Rudenko<Aleksandr.Rudenko@ixr.tech>",
+  "dependencies": {},
+  "devDependencies": {},
+  "husky": {},
+  "license": "MIT",
+  "name": "@starter",
+  "peerDependencies": {},
+  "private": true,
+  "repository": "https://gitlab.ixr.tech/udmf/client.git",
+  "scripts": {},
+  "version": "1.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=14.16.1",
+    "yarn": ">=1.22.10"
+  },
+  "main": "index.js"
+}

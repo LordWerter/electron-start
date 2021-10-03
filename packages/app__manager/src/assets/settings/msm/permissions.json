@@ -1,0 +1,83 @@
+{
+    "developer": {
+        "info": "rw",
+        "users": "rw",
+        "services": "rw",
+        "payment": {
+            "transaction": "rw",
+            "types": "rw"
+        },
+        "packets": "rw",
+        "enableSwitch": "rw",
+        "appLinks": "rw",
+        "modes": {
+            "sco": {
+                "trade": "rw",
+                "assistant": "rw"
+            },
+            "ds": {
+                "promo": "rw",
+                "advertising": "rw",
+                "assistant": "rw"
+            },
+            "sst": {
+                "trade": "rw",
+                "assistant": "rw"
+            }
+        }
+    },
+    "admin": {
+        "info": "rw",
+        "users": "rw",
+        "services": "rw",
+        "payment": {
+            "transaction": "rw",
+            "types": "rw"
+        },
+        "packets": "rw",
+        "enableSwitch": "rw",
+        "appLinks": "r",
+        "modes": {
+            "sco": {
+                "trade": "r",
+                "assistant": "rw"
+            },
+            "ds": {
+                "promo": "rw",
+                "advertising": "rw",
+                "assistant": "rw"
+            },
+            "sst": {
+                "trade": "rw",
+                "assistant": "rw"
+            }
+        }
+    },
+    "assistant": {
+        "info": "r",
+        "users": "-",
+        "services": "-",
+        "payment": {
+            "transaction": "-",
+            "types": "-"
+        },
+        "packets": "rw",
+        "enableSwitch": "-",
+        "appLinks": "-",
+        "modes": {
+            "sco": {
+                "trade": "r",
+                "assistant": "r"
+            },
+            "ds": {
+                "promo": "r",
+                "advertising": "r",
+                "assistant": "r"
+            },
+            "sst": {
+                "trade": "r",
+                "assistant": "r"
+            }
+       }
+    }
+}

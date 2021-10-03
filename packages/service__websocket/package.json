@@ -1,0 +1,20 @@
+{
+	"name": "@udmf-client/service__websocket",
+	"version": "0.0.1",
+	"author": "Alexander Rudenko<Aleksandr.Rudenko@ixr.tech>",
+	"license": "MIT",
+	"repository": {
+		"type": "https",
+		"url": "https://gitlab.ixr.tech/udmf/client.git"
+	},
+	"main": "./index.ts",
+	"types": "index.d.ts",
+	"scripts": {
+	},
+	"peerDependencies": {},
+	"dependencies": {},
+	"devDependencies": {
+		"typescript": "^4.3.2"
+	},
+	"husky": {}
+}

@@ -1,0 +1,44 @@
+{
+  "name": "@udmf-client/service__auth",
+  "private": true,
+  "version": "0.0.1",
+  "author": "Alexander Rudenko<Aleksandr.Rudenko@ixr.tech>",
+  "license": "MIT",
+  "repository": {
+    "type": "https",
+    "url": "https://gitlab.ixr.tech/udmf/client.git"
+  },
+  "main": "./src/index.tsx",
+  "types": "",
+  "scripts": {
+    "lint:ts": "tslint --config tslint.json 'src/**/*.ts'",
+    "lint:markdown": "node --max_old_space_size=4096 ../../node_modules/.bin/markdownlint --rules markdownlint-rule-emphasis-style --config ../configs/lints/.markdownlint.json *.md ./docs/*.md ./src/**/*.md",
+    "stylelint-staged": "stylelint",
+    "lint-staged": "lint-staged"
+  },
+  "peerDependencies": {},
+  "dependencies": {},
+  "devDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-staged && npm run test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "post-checkout": [
+        "git pull origin master"
+      ]
+    }
+  },
+  "lint-staged": {
+    "./src/**/*.ts": "npm run lint:ts",
+    "*.md": [
+      "npm run lint:markdown"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.ts",
+      "!src/types",
+      "src/constants"
+    ]
+  }
+}

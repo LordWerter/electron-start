@@ -1,0 +1,18 @@
+{
+    "msm": {
+        "enable": true
+    },
+    "ds": {
+        "enable": true,
+        "mode": "advertising"
+    },
+    "sst": {
+        "enable": false
+    },
+    "sco": {
+        "enable": true
+    },
+    "poll": {
+        "enable": false
+    }
+}

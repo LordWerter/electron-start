@@ -1,0 +1,34 @@
+{
+    "msm": {
+        "mode": "DEVELOPMENT",
+        "logPaths": {
+            "mainProcess": "./logs/msm/main",
+            "adminPanel": "./logs/msm/renderer"
+        }
+    },
+    "ds": {
+        "mode": "DEVELOPMENT",
+        "logPaths": {
+            "advertising": "./logs/ds/advertising",
+            "promo": "./logs/ds/promo"
+        }
+    },
+    "sst": {
+        "mode": "DEVELOPMENT",
+        "logPaths": {
+            "main": "./logs/sst/main"
+        }
+    },
+    "sco": {
+        "mode": "DEVELOPMENT",
+        "logPaths": {
+            "main": "./logs/sco/main"
+        }
+    },
+    "poll": {
+        "mode": "DEVELOPMENT",
+        "logPaths": {
+            "main": "./logs/poll/main"
+        }
+    }
+}
